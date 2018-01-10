@@ -1,7 +1,7 @@
 const config = require ('../.././config/development.json');
 const knex = require('knex')({
   client: 'postgres',
-  connection: "postgres://luisalvarez:scooby225@localhost:5432/netflix",
+  connection: config.POSTRGES,
   pool: {
     max: 200,
     min: 1

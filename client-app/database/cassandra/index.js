@@ -1,6 +1,6 @@
 const cassandra = require('cassandra-driver');
 
-const client = new cassandra.Client({queryOptions: { consistency: cassandra.types.consistencies.one }, contactPoints: ['127.0.0.1'], keyspace: 'watch_list'});
+const client = new cassandra.Client({queryOptions: { consistency: cassandra.types.consistencies.one }, contactPoints: ['localhost'], keyspace: 'watch_list'});
 client.connect(function(reply, err) {
    console.log(reply);
 });
