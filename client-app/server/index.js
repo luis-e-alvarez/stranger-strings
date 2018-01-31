@@ -67,10 +67,6 @@ app.get('/home', async (req, res) => {
     }
   });
 
-  app.post('/catalogService', (req, res) => {
-    axios.post('/catalog')
-  });
-
 app.listen(3000, ()=>console.log('now listening on 3000'));  
  
 
