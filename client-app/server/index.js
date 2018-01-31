@@ -3,16 +3,11 @@ const compression = require('compression')
 var express = require('express');  
 const elasticsearch = require('../server/elasticsearch.js').elasticsearchClient;
 const search = require('../server/elasticsearch.js').search;
-const router = express.Router();
-const http = require('http');
 let redis = require('./cache.js').client;
 const bodyParser = require('body-parser');
 const jsonParser = bodyParser.json();
 const pg = require('../database/postgres/helpers');
-const axios = require('axios'); 
 const cassandra = require('../database/cassandra/helpers');
-const cluster = require('cluster');
-const numCPUs = require('os').cpus().length;
 const Promise = require('bluebird');
 
 redis = Promise.promisifyAll(redis);
